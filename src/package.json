@@ -1,0 +1,33 @@
+{
+  "name": "reactjs_webapplication_products_inventary",
+  "version": "1.0.0",
+  "description": "Test Task ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/webpack-dev-server --hot",
+    "build": "node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erald91/reactjs_test_task.git"
+  },
+  "author": "erald.c@scopicsoftware.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erald91/reactjs_test_task/issues"
+  },
+  "homepage": "https://github.com/Erald91/reactjs_test_task#readme",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "webpack": "^2.4.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.4.5"
+  }
+}
