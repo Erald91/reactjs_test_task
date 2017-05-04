@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {NavLink as Link} from 'react-router-dom';
 
 class NavCm extends React.Component {
     render() {
@@ -7,12 +8,12 @@ class NavCm extends React.Component {
             <div className="navigation-container">
                 <ul className="nav nav-pills">
                     <li>
-                        <Link to="/">
+                        <Link activeStyle={this.props.activeStyle} to="/home">
                             Products List
                         </Link>
                     </li>
                     <li>
-                        <Link to="/new-product">
+                        <Link activeStyle={this.props.activeStyle} to="/new-product">
                             Add Product
                         </Link>
                     </li>
@@ -20,6 +21,14 @@ class NavCm extends React.Component {
             </div>
         );
     }
+}
+
+NavCm.propTypes = {
+    activeStyle: PropTypes.object
+}
+
+NavCm.defaultProps = {
+    activeStyle: {backgroundColor: '#0086ff', color: '#ffffff'}
 }
 
 export default NavCm

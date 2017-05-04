@@ -16,3 +16,31 @@ div.navigation-container {
     border: 1.5px solid #959595;
     border-radius: 6px;
 }
+
+table.products-table {
+    margin-top: 15px;
+}
+
+table.products-table > thead > tr > th {
+    text-align: center;
+    font-style: italic;
+}
+
+table.products-table > tbody > tr {
+    text-align: center !important;
+}
+
+table.products-table > tbody > tr > td > i {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+form.add-category-form {
+    margin-top: 20px;
+}
+
+span.product-detail {
+    display: block;
+    background-color: yellow;
+    font-style: italic;
+}
