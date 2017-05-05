@@ -1,2 +1,3 @@
 # Ignore all the below files and folders from GIT repo
 /node_modules
+/public/dist

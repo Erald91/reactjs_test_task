@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {appStorage} from '../../utilities';
 
 class ViewProductCm extends React.Component {
     componentWillUnmount() {
         this.props.appRef.setState((prevState, props) => {
-            prevState.viewProduct = null;
+            prevState.product = null;
+            appStorage.setDataItem('product', prevState.product);
         });
     }
 
     render() {
-        let productDetails = this.props.appRef.state.viewProduct;
+        let productDetails = this.props.appRef.state.product;
         return (
             <div className="row">
                 <div className="col-md-offset-4 col-md-4">
@@ -32,7 +34,7 @@ class ViewProductCm extends React.Component {
                             <span className="product-detail">{productDetails.description}</span>
                         </div>
                         <div className="form-group">
-                            <label>Name</label><br/>
+                            <label>Creation Date</label><br/>
                             <span className="product-detail">{productDetails.date}</span>
                         </div>
                     </form>

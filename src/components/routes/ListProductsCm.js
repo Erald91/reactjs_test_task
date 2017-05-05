@@ -22,7 +22,7 @@ class ListProductsCm extends React.Component {
     }
 
     renderProductsList() {
-        var bodyTDs = [];
+        let bodyTDs = [];
         if(!this.props.appRef.state.productsList.length) {
             bodyTDs = <tr className="text-center"><td colSpan="6">No products found</td></tr>;
         } else {
