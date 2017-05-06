@@ -18,6 +18,14 @@ class EditProductCm extends ProductFormCm {
         this.manageProductDetails = this.manageProductDetails.bind(this);
     }
 
+    componentWillUnmount() {
+        let AppRef = this.props.appRef;
+        AppRef.setState((prevState, props) => {
+            prevState.product = null;
+            appStorage.setDataItem('product', null);
+        });
+    }
+
     manageProductDetails(event) {
         let AppRef = this.props.appRef;
         let productId = AppRef.state.product.id;
